@@ -1,12 +1,6 @@
 <html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
-</html>
-<html>
     <head>
-        <title>Ola's blog</title>
+        <title>Francina's blog</title>
     </head>
     <body>
         <p>Hi there!</p>
@@ -36,3 +30,18 @@
         </div>
     </body>
 </html>
+
+{{ posts }}
+{% for post in posts %} {{ post }}{% endfor %}
+
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p> publicado: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
